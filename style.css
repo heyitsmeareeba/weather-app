@@ -5,12 +5,15 @@
 	box-sizing:border-box;
 }
 body{
-	background-color:#222;
+	background:url(images/Desktop\ -\ 1.png);
+	background-size: cover;
+	background-repeat: no-repeat;
+	cursor: pointer;
 }
 .card{
 	width:90%;
 	max-width: 470px;
-	background: linear-gradient(135deg, #00feba, #5b548a);
+	background: rgba(1, 1, 43, 0.5);
 	color:#fff;
 	margin:100px auto 0;
 	border-radius: 20px;
@@ -22,51 +25,98 @@ body{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	border: 3px solid #fff;
+	border-radius: 10px;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 
 }
+
 .search input 
 {
+	
 	border:0;
 	outline: 0;
-	background: #fff;
-	color:grey;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	padding: 10px 25px;
 	height:60px;
 	width: 16px;
-	border-radius:30px;
+	border-radius:20px;
 	flex:1;
-	margin-right: 16px;
+	margin-right: 20px;
 	font-size:18px;
+	
 
 }
+
+.sI:hover{
+	animation: caretBlink 1s steps(1) infinite;
+}
+
 .search button{
-	   border:0;
-	   outline:0;
-	   background: #fff;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
 	   width:60px;
+	   margin-left:0;
 	   cursor: pointer;
 	   height: 60px;
-       border-radius: 50%;
-       transition: 1s;
+	   border: none;
+       border-radius: 20%;
+       transition: 0.2s;
 }
  .search button img{
- 	width:16px;
+ 	width:26px;
  }
- .search button:hover{
- 	box-shadow: 3px 2px 2px 3px grey;
+ .sB:hover{
+    
+    opacity: 0.7;
  
  
  }
- .search button:active
+ .sB:active
  {
- 		opacity: 0.8;
- 	box-shadow: none;
+	opacity: 0.5;
+
+
 
  }
+ /*animations*/
+@keyframes caretBlink {
+	50%{
+		caret-color: white;
+	}
+	100%{
+		caret-color: transparent;
+	}
+}
  .rainicon{
  	width:170px;
  	margin-top: 30px ;
 
+ }
+ .invalid{
+	display: none;
+	font-size: 20px;
+	color: rgb(134, 6, 6);
+	text-align: left;
+	font-weight: bold;
+	margin-left: 12px;
+
+
+ }
+ .noInput{
+	display:none;
+	font-size: 20px;
+	color: rgb(134, 6, 6);
+	text-align: left;
+	font-weight: bold;
+	margin-left: 12px;
+
+
+ }
+ .weather{
+	display: none;
  }
  .weather h1{
  	font-size: 80px;
@@ -100,4 +150,6 @@ body{
  .humidity ,.wind{
  	font-size: 28px;
  	margin-top:-6px ;
+
  }
+ 
